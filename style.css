@@ -1,0 +1,148 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* navbar */
+
+nav {
+  height: 40px;
+  background-color: beige;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 12px;
+  position: fixed;
+  top: 0;
+  width: 98.2%;
+}
+
+.heading {
+  margin-top: 80px;
+}
+
+.logo {
+  cursor: pointer;
+  color: rgb(133, 81, 13);
+}
+
+.nav_item {
+  cursor: pointer;
+}
+
+.food {
+  font-size: 14px;
+  margin: 0px 12px;
+  font-weight: 300;
+}
+
+.food:hover {
+  color: rgb(63, 63, 42);
+  text-decoration: underline;
+}
+
+/* heading */
+
+h2 {
+  font-weight: lighter;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* category 1 */
+
+.cateogory1_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category1_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+  transition: all 0.3s;
+}
+
+.category1_box > img {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+}
+.category1_box > span {
+  font-weight: lighter;
+  padding-top: 5px;
+  font-size: 14px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.category1_box:hover {
+  border-bottom: 1px solid black;
+}
+
+.category1_box:hover > img {
+  transform: scale(1.03);
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0px 0px 7px 5px lightgray;
+}
+
+/* category 2 */
+
+.cateogory2_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.category2_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  margin: 5px 10px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.category2_box > img {
+  height: 120px;
+  width: 90px;
+  border-radius: 5px;
+}
+.category2_box > span {
+  font-weight: lighter;
+  padding-top: 5px;
+  font-size: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.category2_box:hover {
+  box-shadow: 0px 1px 1px 1px lightgray;
+  border-radius: 5px;
+}
+
+.whatsapp_contact {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(56, 178, 32);
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.whatsapp_contact > a > i {
+  font-size: 40px;
+  color: white;
+}
