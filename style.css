@@ -15,6 +15,7 @@ nav {
   position: fixed;
   top: 0;
   width: 98.2%;
+  z-index: 1;
 }
 
 .logo {
@@ -46,24 +47,25 @@ nav {
 .main_headings {
   font-weight: lighter;
   text-align: center;
-  font-family: 'Merriweather, serif';
+  font-family: "Merriweather, serif";
 }
 
-.gift_heading{
+.gift_heading {
   text-align: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
+  margin-left: 2%;
 }
 
 /* container */
 
-.container{
+.container {
   padding: 20px;
 }
 
 /* category 1 */
 
-.cateogory1_container {
+.category1_container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -86,15 +88,17 @@ nav {
   width: 100px;
   border-radius: 50%;
 }
+
 .category1_box > span {
   font-weight: bold;
   padding-top: 5px;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .category1_box:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid gray;
+  color: gray;
 }
 
 .category1_box:hover > img {
@@ -121,7 +125,7 @@ nav {
   margin: 2px 7px;
   cursor: pointer;
   border: 1px solid white;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .category2_box > img {
@@ -129,6 +133,7 @@ nav {
   width: 160px;
   border-radius: 5px;
 }
+
 .category2_box > span {
   padding-top: 5px;
   font-size: 13px;
@@ -140,6 +145,225 @@ nav {
   border-color: lightgray;
   border-radius: 5px;
 }
+
+/* popular gifts cards */
+
+.gift_card_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift_card {
+  display: inline-block;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.gift_card > div > img {
+  height: 200px;
+  width: 220px;
+  border-radius: 10px;
+}
+
+.gift_card_title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.gift_card_reviews > span > i {
+  font-size: 12px;
+  margin-left: -2px;
+}
+
+.gift_card_reviews > span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+
+.gift_card_price {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gift_card_oldprice {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: line-through;
+  color: #0f743b;
+  font-size: 12px;
+}
+
+.gift_card_discount {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f743b;
+  font-size: 12px;
+}
+
+.gift_card_img_container {
+  position: relative;
+}
+
+.gift_card_like {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 1s ease-in-out;
+}
+
+.gift_card:hover {
+  box-shadow: 0px 0px 10px 5px lightgray;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gift_card:hover .gift_card_like {
+  display: flex;
+}
+
+/* popular gift categories */
+
+.gift_cat_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift_cat_card {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.gift_cat_img > img {
+  height: 176px;
+  width: 222px;
+  border-radius: 10px;
+}
+
+.gift_cat_text > h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.gift_cat_card:hover {
+  box-shadow: 0px 0px 7px 5px lightgray;
+  cursor: pointer;
+}
+
+/* info section */
+
+.info_container {
+  padding: 2em;
+  background-color: #fffce0;
+  margin-top: 4em;
+}
+
+.info_section_header {
+  text-align: center;
+}
+
+.info_section_header > h1 {
+  font-weight: lighter;
+  font-family: "Merriweather, serif";
+  margin-bottom: 0;
+}
+
+.info_section_header > span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.info_section_content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info_section_content > div {
+  width: 30%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.info_section_footer {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.info_section_footer > button {
+  background-color: transparent;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: 2px solid black;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.info_section_footer > button:hover {
+  box-shadow: 0px 0px 10px 1px black;
+}
+
+/* call to action */
+
+.email_contact {
+  background-color: #c5e7fe;
+  padding: 1em;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.email_contact > div > input {
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 15px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  width: 25%;
+  height: 25px;
+  border: 1px solid lightgray;
+  border-right: none;
+  outline: none;
+}
+
+.email_contact > div > button {
+  margin-left: -5px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-left: none;
+  font-weight: bold;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+}
+
+.email_contact > div > button:hover {
+  background-color: rgb(234, 232, 232);
+}
+
+.etsy_info {
+  padding: 2em;
+  text-align: center;
+  background-color: #4f79de;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* whatsapp contact */
 
 .whatsapp_contact {
   height: 50px;
@@ -158,4 +382,81 @@ nav {
 .whatsapp_contact > a > i {
   font-size: 40px;
   color: white;
+}
+
+/* media query */
+
+@media (max-width: 900px) {
+  .cateogory2_container {
+    display: block;
+  }
+
+  .category2_box {
+    flex-direction: row;
+    justify-content: left;
+    border-color: lightgray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .category2_box > img {
+    width: 80px;
+    height: 70px;
+    margin-right: 5px;
+  }
+
+  .info_section_content {
+    display: block;
+  }
+
+  .info_section_content > div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .email_contact > div > input {
+    width: 30%;
+  }
+}
+
+@media (max-width: 536px) {
+  .gift_card_container {
+    display: block;
+  }
+
+  .gift_card {
+    display: block;
+  }
+
+  .gift_card > div > img {
+    width: 100%;
+  }
+
+  .gift_cat_container {
+    display: block;
+  }
+
+  .gift_cat_img > img {
+    width: 100%;
+  }
+
+  .email_contact > div > input {
+    width: 50%;
+  }
+}
+
+@media (max-width: 330px) {
+  .category1_box {
+    padding: 5px;
+    margin: 4px;
+  }
+
+  .category1_box > img {
+    height: 70px;
+    width: 70px;
+  }
+
+  .category1_box > span {
+    font-size: 10px;
+  }
 }
