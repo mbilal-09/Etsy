@@ -6,7 +6,7 @@ body {
 /* heading */
 
 .first_heading {
-  margin-top: 80px;
+  margin-top: 130px;
 }
 
 .main_headings {
@@ -39,8 +39,10 @@ nav {
 
 .top_nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 5px;
+  padding-bottom: 0;
 }
 
 .top_nav > div {
@@ -49,8 +51,7 @@ nav {
 }
 
 .top_nav > div > img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
 }
 
 .category_menu {
@@ -65,12 +66,13 @@ nav {
 }
 
 .nav_search_box {
-  width: 60%;
+  width: 50%;
   padding: 1em;
+  display: flex;
 }
 
 .nav_search_box > input {
-  width: 90%;
+  width: 95%;
   padding: 1em 2em;
   outline: none;
   border: 2px solid black;
@@ -108,10 +110,11 @@ nav {
 
 .nav_cart_box > span {
   font-family: Arial, Helvetica, sans-serif;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 20px;
-  margin: 0px 10px;
+  margin: 0px 5px;
   cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 
 .nav_cart_box > i {
@@ -119,6 +122,7 @@ nav {
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 
 .bottom_nav {
@@ -140,11 +144,28 @@ nav {
   padding: 1em;
 }
 
+.res_nav {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.res_nav > input {
+  width: 80%;
+}
+
+.res_nav > i {
+  font-size: 25px;
+  margin-right: 2%;
+}
+
 .bottom_nav > ul > li:hover {
   background-color: rgb(240, 239, 239);
   border-radius: 30px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .category_menu:hover {
@@ -492,6 +513,24 @@ nav {
 /* screen 900px */
 
 @media (max-width: 900px) {
+
+  .nav_search_box {
+    display: none !important;
+  }
+
+  .res_nav {
+    display: flex !important;
+    padding-top: 0%;
+  }
+
+  .bottom_nav > ul {
+    display: none;
+  }
+
+  .category_menu {
+    display: none;
+  }
+
   .cateogory2_container {
     display: block;
   }
@@ -527,6 +566,15 @@ nav {
 /* screen 536px */
 
 @media (max-width: 536px) {
+  .res_nav {
+    padding: 0%;
+  }
+
+  .res_nav > i {
+    font-size: 16px;
+    margin-right: 1%;
+  }
+
   .gift_card_container {
     display: block;
   }
